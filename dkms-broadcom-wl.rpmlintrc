@@ -1,0 +1,2 @@
+# Non-free object file can't be stripped
+addFilter("E: unstripped-binary-or-object")

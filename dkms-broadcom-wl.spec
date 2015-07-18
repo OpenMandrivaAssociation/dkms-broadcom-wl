@@ -3,7 +3,7 @@
 
 Name:		dkms-%{module_name}
 Version:	6.30.223.248
-Release:	1
+Release:	2
 Summary:	DKMS-ready kernel-source for the %name driver
 License:	Mixed
 URL:		http://www.broadcom.com/support/?gid=1
@@ -45,7 +45,7 @@ MAKE[0]="make"
 DEST_MODULE_LOCATION[0]="/kernel/drivers/net/wireless/broadcom"
 AUTOINSTALL="yes"
 EOF
-tar c . | tar x -C $RPM_BUILD_ROOT/usr/src/%{module_name}-%version-%release/
+cp -a * $RPM_BUILD_ROOT/usr/src/%{module_name}-%version-%release/
 
 
 %post

@@ -3,7 +3,7 @@
 
 Name:		dkms-%{module_name}
 Version:	6.30.223.248
-Release:	2
+Release:	3
 Summary:	DKMS-ready kernel-source for the %name driver
 License:	Mixed
 URL:		http://www.broadcom.com/support/?gid=1

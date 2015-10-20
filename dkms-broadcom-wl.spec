@@ -2,8 +2,8 @@
 %define module_name broadcom-wl
 
 Name:		dkms-%{module_name}
-Version:	6.30.223.248
-Release:	3
+Version:	6.30.223.271
+Release:	1
 Summary:	DKMS-ready kernel-source for the %name driver
 License:	Mixed
 URL:		http://www.broadcom.com/support/?gid=1
@@ -15,9 +15,7 @@ Source0:	http://www.broadcom.com/docs/linux_sta/hybrid-v35-nodebug-pcoem-%(echo 
 %endif
 Source100:	%{name}.rpmlintrc
 # Patches stolen from https://aur.archlinux.org/packages/broadcom-wl-dkms/
-Patch0:		gcc.patch
-Patch1:		license.patch
-Patch2:		linux-recent.patch
+Patch1:		broadcom-wl-6.30.223.271-fix-null-pointer-crash.patch
 Group:		System/Kernel and hardware
 Requires(pre):	dkms
 Requires(post): dkms

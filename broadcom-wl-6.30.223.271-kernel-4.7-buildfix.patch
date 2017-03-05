@@ -1,0 +1,20 @@
+
+Simple fix for kernel 4.7 series
+
+Signed-off-by: Thomas Backlund <tmb@mageia.org>
+
+diff -Nurp broadcom-wl-6.30.223.271.orig/src/wl/sys/wl_cfg80211_hybrid.c broadcom-wl-6.30.223.271/src/wl/sys/wl_cfg80211_hybrid.c
+--- broadcom-wl-6.30.223.271.orig/src/wl/sys/wl_cfg80211_hybrid.c	2015-09-19 01:47:30.000000000 +0300
++++ broadcom-wl-6.30.223.271/src/wl/sys/wl_cfg80211_hybrid.c	2016-07-04 23:15:50.659221648 +0300
+@@ -43,6 +43,11 @@
+ #define EVENT_FLAGS(e) dtoh16((e)->flags)
+ #define EVENT_STATUS(e) dtoh32((e)->status)
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 7, 0)
++#define IEEE80211_BAND_2GHZ NL80211_BAND_2GHZ
++#define IEEE80211_BAND_5GHZ NL80211_BAND_5GHZ
++#endif
++
+ #ifdef BCMDBG
+ u32 wl_dbg_level = WL_DBG_ERR | WL_DBG_INFO;
+ #else

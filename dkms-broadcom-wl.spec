@@ -9,9 +9,9 @@ License:	Mixed
 URL:		http://www.broadcom.com/support/?gid=1
 ExclusiveArch:	x86_64 %{ix86}
 %ifarch x86_64
-Source0:	http://www.broadcom.com/docs/linux_sta/hybrid-v35_64-nodebug-pcoem-%(echo %{version} |sed -e 's,\.,_,g').tar.gz
+Source0:	http://www.broadcom.com/docs-and-downloads/docs/linux_sta/hybrid-v35_64-nodebug-pcoem-%(echo %{version} |sed -e 's,\.,_,g').tar.gz
 %else
-Source0:	http://www.broadcom.com/docs/linux_sta/hybrid-v35-nodebug-pcoem-%(echo %{version} |sed -e 's,\.,_,g').tar.gz
+Source0:	http://www.broadcom.com/docs-and-downloads/docs/linux_sta/hybrid-v35-nodebug-pcoem-%(echo %{version} |sed -e 's,\.,_,g').tar.gz
 %endif
 Source100:	%{name}.rpmlintrc
 # Patches stolen from https://aur.archlinux.org/packages/broadcom-wl-dkms/

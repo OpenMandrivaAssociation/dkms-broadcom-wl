@@ -3,7 +3,7 @@
 
 Name:		dkms-%{module_name}
 Version:	6.30.223.271
-Release:	2
+Release:	3
 Summary:	DKMS-ready kernel-source for the %name driver
 License:	Mixed
 URL:		http://www.broadcom.com/support/?gid=1
@@ -19,6 +19,8 @@ Patch1:		broadcom-wl-6.30.223.271-fix-null-pointer-crash.patch
 Patch2:		broadcom-wl-6.30.223.271-kernel-4.3-rdtscl-buildfix.patch
 Patch3:		broadcom-wl-6.30.223.271-kernel-4.7-buildfix.patch
 Patch4:		broadcom-wl-6.30.223.271-kernel-4.8-buildfix.patch
+Patch5:		linux411.patch
+patch6:		linux412.patch
 Group:		System/Kernel and hardware
 Requires(pre):	dkms
 Requires(post): dkms

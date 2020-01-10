@@ -30,7 +30,7 @@ Driver for Broadcom WiFi chips
 
 %prep
 %setup -qcn %module_name-%version
-%apply_patches
+%autopatch -p1
 
 # Since we're actually packaging the source...
 find . -name "*~" |xargs rm

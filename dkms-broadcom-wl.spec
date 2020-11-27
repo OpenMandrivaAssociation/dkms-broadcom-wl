@@ -4,7 +4,7 @@
 
 Name:		dkms-%{module_name}
 Version:	6.30.223.271
-Release:	3
+Release:	4
 Summary:	DKMS-ready kernel-source for the %name driver
 License:	Mixed
 Group:		System/Kernel and hardware
@@ -141,3 +141,6 @@ rm -rf %{buildroot}
 %files -n %{name}-common
 #config #{_sysconfdir}/modprobe.d/%{name}-alias.conf
 #config #{_sysconfdir}/modprobe.d/%{name}-blacklist.conf
+
+%config %{_sysconfdir}/modprobe.d/broadcom-wl-alias.conf
+%config %{_sysconfdir}/modprobe.d/broadcom-wl-blacklist.conf

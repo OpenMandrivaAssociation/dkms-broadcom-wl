@@ -1,14 +1,17 @@
 
-Fix for null pointer crash (mga#16390)
+Description: Fixing null pointer crash
 
-Patch from ubuntu
-https://bugs.launchpad.net/ubuntu/+source/bcmwl/+bug/1415880
+Origin: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=773713
+Bug-Ubuntu: https://launchpad.net/bugs/1415880
+Last-Update: 2015-08-18
 
-Signed-off-by: Thomas Backlund <tmb@mageia.org>
+---
+ src/wl/sys/wl_linux.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-
---- 6_30_223_271/src/wl/sys/wl_linux.c.orig	2015-09-19 01:47:30.000000000 +0300
-+++ 6_30_223_271/src/wl/sys/wl_linux.c	2015-10-05 15:54:31.762493307 +0300
+diff -Nurp broadcom-wl-6.30.223.271.orig/src/wl/sys/wl_linux.c broadcom-wl-6.30.223.271/src/wl/sys/wl_linux.c
+--- broadcom-wl-6.30.223.271.orig/src/wl/sys/wl_linux.c	2015-09-19 01:47:30.000000000 +0300
++++ broadcom-wl-6.30.223.271/src/wl/sys/wl_linux.c	2020-01-11 01:12:32.543692150 +0200
 @@ -2165,8 +2165,8 @@ wl_start(struct sk_buff *skb, struct net
  	wlif = WL_DEV_IF(dev);
  	wl = WL_INFO(dev);

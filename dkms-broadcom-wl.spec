@@ -105,7 +105,7 @@ BUILT_MODULE_NAME=%{kname}
 AUTOINSTALL=yes
 EOF
 
-%post -n dkms-%{name}
+%post
 set -x
 /usr/sbin/dkms --rpm_safe_upgrade add -m %{name} -v %{version}-%{release}
 if [ -z "$DURING_INSTALL" ] ; then
@@ -113,7 +113,7 @@ if [ -z "$DURING_INSTALL" ] ; then
     /usr/sbin/dkms --rpm_safe_upgrade install -m %{name} -v %{version}-%{release}
 fi
 
-%preun -n dkms-%{name}
+%preun
 # rmmod can fail
 /sbin/rmmod %{kname} >/dev/null 2>&1 ||:
 set -x

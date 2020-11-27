@@ -139,5 +139,5 @@ rm -rf %{buildroot}
 %{_usr}/src/%{name}-%{version}-%{release}/*
 
 %files -n %{name}-common
-%config %{_sysconfdir}/modprobe.d/%{name}-alias.conf
-%config %{_sysconfdir}/modprobe.d/%{name}-blacklist.conf
+#config #{_sysconfdir}/modprobe.d/%{name}-alias.conf
+#config #{_sysconfdir}/modprobe.d/%{name}-blacklist.conf

@@ -4,13 +4,13 @@
 
 Name:		dkms-%{module_name}
 Version:	6.30.223.271
-Release:	4
+Release:	5
 Summary:	DKMS-ready kernel-source for the %name driver
 License:	Mixed
 Group:		System/Kernel and hardware
 URL:		http://www.broadcom.com/support/?gid=1
-ExclusiveArch:	x86_64 %{ix86}
-%ifarch x86_64
+
+%ifarch x86_64 znver1 aarch64
 Source0:	http://www.broadcom.com/docs-and-downloads/docs/linux_sta/hybrid-v35_64-nodebug-pcoem-%(echo %{version} |sed -e 's,\.,_,g').tar.gz
 %else
 Source0:	http://www.broadcom.com/docs-and-downloads/docs/linux_sta/hybrid-v35-nodebug-pcoem-%(echo %{version} |sed -e 's,\.,_,g').tar.gz

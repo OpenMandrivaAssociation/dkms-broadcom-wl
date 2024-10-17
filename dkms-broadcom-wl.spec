@@ -8,7 +8,7 @@ Release:	5
 Summary:	DKMS-ready kernel-source for the %name driver
 License:	Mixed
 Group:		System/Kernel and hardware
-URL:		http://www.broadcom.com/support/?gid=1
+URL:		https://www.broadcom.com/support/?gid=1
 
 %ifarch x86_64 znver1 aarch64
 Source0:	http://www.broadcom.com/docs-and-downloads/docs/linux_sta/hybrid-v35_64-nodebug-pcoem-%(echo %{version} |sed -e 's,\.,_,g').tar.gz
